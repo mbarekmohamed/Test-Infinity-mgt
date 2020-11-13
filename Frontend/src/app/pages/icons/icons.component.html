@@ -1,0 +1,143 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" card-title"><B>Liste des condidats</B></h3>
+        </div>
+        <div class=" card-body">
+          <p-table #dt [value]="candidats" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" styleClass="p-datatable-sm p-datatable-striped">
+         <!-- <p-table #dt [value]="parts" [scrollable]="true"  scrollHeight="500px" styleClass="p-datatable-sm p-datatable-striped">-->
+            <ng-template pTemplate="colgroup">
+              <colgroup>
+                  <col style="width:18%">
+                  <col style="width:11%">
+                  <col style="width:22%">
+                  <col style="width:20%">
+                  <col style="width:11%">
+                  <col style="width:11%">
+                  <col style="width:7%">
+              </colgroup>
+          </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                  <th>Nom<p-sortIcon field="Nom"></p-sortIcon></th>
+                  <th>Prénom <p-sortIcon field="Prénom"></p-sortIcon></th>
+                  <th>Téléphone<p-sortIcon field="code"></p-sortIcon></th>
+                  <th>Email<p-sortIcon field="code"></p-sortIcon></th>
+                  <th>statut_mail<p-sortIcon field="code"></p-sortIcon></th>
+                  <th>etat<p-sortIcon field="code"></p-sortIcon></th>
+                  <th>Details</th>
+                </tr>
+                <tr>
+                  <th>
+                      <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                  </th>
+                  <th>
+                    <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                  </th>
+                  <th>
+                  <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                  </th>
+                  <th>
+                    <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                 </th>
+                 <th>
+                  <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                  </th>
+                  <th>
+                    <input pInputText type="text" (input)="dt.filter($event.target.value, '', 'startsWith')" placeholder="Search ..." class="form-control form-control-sm">
+                 </th>
+                 <th></th>
+              </tr>
+              <tr>
+                <td>mohamed</td>
+                <td>mbarek</td>
+                <td>22222222</td>
+                <td>@gmail.com</td>
+                <td>valide</td>
+                <td>nouvelle</td>
+                <td><button type="button" class="btn btn-info" (click)="showDialog()" ><i class="fa fa-bars"></i></button></td>
+
+              </tr>
+              <tr>
+                <td>ahmed</td>
+                <td>mbarek</td>
+                <td>22222222</td>
+                <td>@gmail.com</td>
+                <td>valide</td>
+                <td>nouvelle</td>
+                <td><button type="button" class="btn btn-info" (click)="showDialog()" ><i class="fa fa-bars"></i></button></td>
+
+              </tr>
+            <!--</ng-template>
+            <ng-template pTemplate="body" let-data>
+                <tr>
+                  <td>{{ data.nom}}</td>
+                  <td>{{ data.prenom}}</td>
+                  <td>{{ data.tel}}</td>
+                  <td>{{ data.email}}</td>
+                  <td>{{ data.statut_mail}}</td>
+                  <td>{{ data.etat}}</td>
+                  <td><button type="button" class="btn btn-info" (click)="showDialog()" ><i class="fa fa-bars"></i></button></td>
+                </tr>-->
+            </ng-template>
+        </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--------------------------------------------------------- -->
+
+
+<!-- dialogue-->
+<p-dialog header="Details" [(visible)]="dialogVisible" [style]="{width: '80vw'}" [baseZIndex]="10000" [maximizable]="true" [modal]="true" [resizable]="true" [contentStyle]="{height: '600px'}">
+  <p-table [value]="" [scrollable]="true" scrollHeight="flex" styleClass="p-datatable-sm p-datatable-striped p-datatable-gridlines">
+    <ng-template pTemplate="colgroup">
+      <colgroup>
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:15%">
+          <col style="width:30%">
+
+      </colgroup>
+  </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+          <th>nom </th>
+          <th>prenom</th>
+          <th>tel</th>
+          <th>mail</th>
+          <th>statut</th>
+          <th>etat</th>
+        </tr>
+        <tr>
+          <td>mohamed</td>
+          <td>mbarek</td>
+          <td>22222222</td>
+          <td>@gmail.com</td>
+          <td>valide</td>
+          <td><div class="btn-group">
+            <select  class="custom-select"  required>
+              <option   selected>En cours</option>
+              <option  >confirme</option>
+              <option >rejeté</option>
+            </select>
+        </div></td>
+
+        </tr>
+
+    </ng-template>
+
+      <ng-template pTemplate="body" let-data>
+
+      </ng-template>
+  </p-table>
+  <ng-template pTemplate="footer">
+      <button type="button" pButton pRipple icon="pi pi-times" (click)="dialogVisible=false" label="Dismiss" class="p-button-text"></button>
+  </ng-template>
+</p-dialog>

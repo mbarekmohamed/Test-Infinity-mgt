@@ -1,0 +1,32 @@
+.theme{
+
+  margin-left: 250px;
+  margin-top: 6px;
+}
+.theme-btn{
+  background-color: rgb(244, 252, 255);
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 35px;
+  opacity: 0.8;
+  border: 1px solid rgb(209, 206, 206);
+  transition-duration: 0.4s;
+}
+.theme-btn:hover {
+  background-color:rgb(1, 102, 235);
+  color: white;
+}
+
+.color-btn{
+  border: none;
+  border-radius: 50px;
+
+  margin-left: 10px;
+  border: 1px solid rgb(83, 83, 83);
+  padding: 12px;
+}
+
+.dropdown-menu{
+  align-items: center;
+}

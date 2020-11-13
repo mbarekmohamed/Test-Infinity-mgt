@@ -1,0 +1,69 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h1 class=" card-title"><B>Ajouter une candidature</B></h1>
+        </div>
+        <div class=" card-body">
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nom</label>
+      <input type="text" class="form-control" (keyup.enter)="OnInput($event,'name')" id="" placeholder="nom" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Prenom</label>
+      <input type="text" class="form-control" (keyup.enter)="OnInput($event,'prenom')" id="" placeholder="prénom" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Email</label>
+    <input type="email" class="form-control" (keyup.enter)="OnInput($event,'email')" id="" placeholder="example@gmail.com"required>
+  </div>
+
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <div class="form-group">
+      <div class="form-group">
+        <label >Date de naissance</label>
+        <input type="date" name="bday" max="3000-12-31"
+               min="1000-01-01" (keyup.enter)="OnInput($event,'date')" class="form-control">
+       </div>
+    </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Telephone</label>
+      <input type="number" class="form-control" (keyup.enter)="OnInput($event,'tel')" id="" placeholder="phone">
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Disponibilité</label>
+        <input type="number" class="form-control" (keyup.enter)="OnInput($event,'disp')" id="" placeholder="entre 0 et 6 mois">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nbr d'année d'experiences</label>
+        <input type="number" class="form-control" (keyup.enter)="OnInput($event,'exp')" id="" placeholder="">
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" (keyup.enter)="OnInput($event,'cv')" id=""
+            aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="">Votre CV (pdf)</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Message</label>
+      <textarea class="form-control" (keyup.enter)="OnInput($event,'msg')" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  <button type="submit" (click)="save($event)" class="btn btn-info">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</div>

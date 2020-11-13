@@ -1,0 +1,58 @@
+.btn {
+  background-color: grey; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 10px 15px; /* Some padding */
+  font-size: 10px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: grey;
+}
+
+.table-fixed thead {
+  width: 100%;
+}
+.table-fixed tbody {
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+
+#id {
+  font-size: 0.8em;
+}
+
+
+//menu buttons
+
+.dropdown-menu{
+  height: 150px;
+  overflow-y: auto;
+}
+
+.custom-select{
+  background-color: rgb(244, 252, 255);
+  width: 180px;
+  margin-right: 10px;
+}
+
+.custom-datepicker{
+  background-color: rgb(244, 252, 255);
+  width: 230px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+.fit-picture {
+  width: 500px;
+}
