@@ -1,8 +1,8 @@
 # Test-Infinity-mgt
-##Backend : 
+## Backend : 
 #### framework : Django + Django rest framework
 #### Database : MySQL
 
-## Frntend :
+## Frontend :
 #### Angular 9 
 #### Bootstrap 4
