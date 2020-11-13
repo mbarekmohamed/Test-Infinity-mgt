@@ -1,4 +1,4 @@
-# Test-Infinity-mgt
+# Test Full stack Infinity-mgt
 ## Backend : 
 #### framework : Django + Django rest framework
 #### Database : MySQL
